@@ -1,21 +1,24 @@
-import firebase_admin
-from firebase_admin import credentials, firestore
 from fastapi import FastAPI
-from dotenv import load_dotenv
-from os import environ as env
-
-load_dotenv()  # carrega o .env
-
-cred_path = env["FIREBASE_SERVICE_KEY"]
-
-if not firebase_admin._apps: 
-    cred = credentials.Certificate(cred_path)
-    firebase_admin.initialize_app(cred)
-
-db = firestore.client()
+from firestore_service import (
+    get_edges,
+    get_features,
+    get_classes
+)
 
 app = FastAPI()
 
 @app.get("/")
 def read_root():
     return {"message": "Hello World"}
+
+@app.get("/edges")
+def edges():
+    return get_edges()
+
+@app.get("/features")
+def features():
+    return get_features()
+
+@app.get("/classes")
+def classes():
+    return get_classes()
