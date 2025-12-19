@@ -1,0 +1,86 @@
+[
+  {
+    "id": "aura_guardian",
+    "name": "Aura Guardian",
+    "features": ["aura_reader", "the_power_of_aura", "sword_of_body_and_soul", "ambient_aura", "aura_mastery"],
+    "prerequisite": { "all": { "level": null, "edges": ["elemental_connection_fighting"], "features": [], "moves": [], "stats": [] }, "any": [] },
+    "extra": {
+      "type": "class",
+      "tags": ["+Attack or Special Attack"],
+      "frequency": "Static",
+      "effect": "Choose two of Detect, Vacuum Wave, or Force Palm. You learn the chosen Moves.",
+      "grants": { "moves_choice": ["Detect", "Vacuum Wave", "Force Palm"], "choose": 2 }
+    }
+  },
+  {
+    "id": "channeler",
+    "name": "Channeler",
+    "features": ["shared_senses", "battle_synchronization", "spirit_boost", "power_conduit", "pain_dampening", "soothing_connection"],
+    "prerequisite": { "all": { "level": null, "edges": ["mystic_senses"], "features": [], "moves": [], "stats": [] }, "any": [] },
+    "extra": {
+      "type": "class",
+      "frequency": "At-Will",
+      "action": "Swift Action",
+      "target": "A Pokémon",
+      "effect": "You Channel the target Pokémon. If Channeling a Hostile Pokémon, make an Intuition Check DC 15. You may stop Channeling as a Free Action. You may Channel up to your Intuition Rank Pokémon at a time. If a Channeled Pokémon goes >20m away, it stops being Channeled. While Channeling: mutual truthful emotional/intention communication; you know its Moves/Abilities/Capabilities; allied Channeled Pokémon may Intercept for each other regardless of Loyalty; if you are Fainted you stop Channeling all; when you Channel, you get vague knowledge of the Pokémon’s past hour as memories.",
+      "note": "Some [Orders] require Channeling, which isn’t League Legal."
+    }
+  },
+  {
+    "id": "hex_maniac",
+    "name": "Hex Maniac",
+    "features": ["hex_maniac_studies", "diffuse_pain", "malediction", "grand_hex"],
+    "prerequisite": { "all": { "level": null, "edges": [], "features": [], "moves": [], "stats": [{ "stat": "Occult Education", "minRank": "Novice" }] }, "any": [] },
+    "extra": { "type": "class", "tags": ["+HP"], "frequency": "Static", "effect": "Choose Cursed Body or Omen. You gain the Chosen Ability.", "choice": ["Cursed Body", "Omen"] }
+  },
+  {
+    "id": "ninja",
+    "name": "Ninja",
+    "features": ["ninjas_arsenal", "poison_weapons", "genjutsu", "utility_drop", "weightless_step", "kinjutsu"],
+    "prerequisite": { "all": { "level": null, "edges": [], "features": [], "moves": [], "stats": [{ "stat": "Stealth", "minRank": "Novice" }, { "stat": "Combat", "minRank": "Novice" }] }, "any": [] },
+    "extra": { "type": "class", "tags": ["+Speed"], "frequency": "Static", "effect": "You learn the Moves Double Team and Poison Powder.", "grants": { "moves": ["Double Team", "Poison Powder"] } }
+  },
+  {
+    "id": "oracle",
+    "name": "Oracle",
+    "features": ["divination", "unveiled_sight", "small_prophecies", "mark_of_vision", "two_second_preview", "prescience"],
+    "prerequisite": { "all": { "level": null, "edges": ["mystic_senses"], "features": [], "moves": [], "stats": [{ "stat": "Perception", "minRank": "Novice" }] }, "any": [] },
+    "extra": { "type": "class", "tags": ["+Special Defense"], "frequency": "Static", "effect": "You gain the Pickup Ability.", "grants": { "abilities": ["Pickup"] } }
+  },
+  {
+    "id": "sage",
+    "name": "Sage",
+    "features": ["sacred_shield", "mystic_defense", "sages_benediction", "lay_on_hands", "highly_responsive_to_prayers", "divine_wind"],
+    "prerequisite": { "all": { "level": null, "edges": [], "features": [], "moves": [], "stats": [{ "stat": "Occult Education", "minRank": "Novice" }] }, "any": [] },
+    "extra": {
+      "type": "class",
+      "tags": ["+HP"],
+      "frequency": "At-Will",
+      "action": "Standard Action",
+      "target": "An ally within 5 meters",
+      "effect": "The target gains Damage Reduction equal to your Occult Education Rank doubled or their Tick Value, whichever is higher, for one full round.",
+      "note": "Does not stack from different Trainers on one target."
+    }
+  },
+  {
+    "id": "telekinetic",
+    "name": "Telekinetic",
+    "features": ["pk_alpha", "pk_omega", "power_of_the_mind", "pk_combat", "telekinetic_burst", "psionic_overload"],
+    "prerequisite": { "all": { "level": null, "edges": ["elemental_connection_psychic"], "features": ["iron_mind"], "moves": [], "stats": [] }, "any": [] },
+    "extra": { "type": "class", "tags": ["+Special Attack"], "frequency": "Static", "effect": "You gain the Telekinetic Capability.", "grants": { "capabilities": ["Telekinetic"] } }
+  },
+  {
+    "id": "telepath",
+    "name": "Telepath",
+    "features": ["honed_mind", "telepathic_awareness", "thought_detection", "telepathic_warning", "mental_assault", "suggestion"],
+    "prerequisite": { "all": { "level": null, "edges": ["elemental_connection_psychic"], "features": ["iron_mind"], "moves": [], "stats": [{ "stat": "Intuition", "minRank": "Novice" }] }, "any": [] },
+    "extra": { "type": "class", "tags": ["+Special Defense"], "frequency": null, "action": "Swift Action", "ap_cost": 2, "effect": "You gain the Telepathy Capability for the rest of the scene.", "grants": { "capabilities": ["Telepathy"] } }
+  },
+  {
+    "id": "warper",
+    "name": "Warper",
+    "features": ["space_distortion", "warping_ground", "strange_energy", "farcast", "warped_transmission", "reality_bender"],
+    "prerequisite": { "all": { "level": null, "edges": ["elemental_connection_psychic"], "features": [], "moves": [], "stats": [{ "stat": "Guile", "minRank": "Novice" }] }, "any": [] },
+    "extra": { "type": "class", "tags": ["+Speed"], "frequency": "Static", "effect": "You gain the Probability Control Ability.", "grants": { "abilities": ["Probability Control"] } }
+  }
+]
